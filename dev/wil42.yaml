@@ -1,21 +1,21 @@
 apiVersion: apps/v2
 kind: Deployment
 metadata:
-  name: will42-app
+  name: wil42-app
   labels:
-    app: will42-app
+    app: wil42-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: will42-app
+      app: wil42-app
   template:
     metadata:
       labels:
-        app: will42-app
+        app: wil42-app
     spec:
       containers:
-        - name: will42-app
+        - name: wil42-app
           image: wil42/playground:v1
           ports:
             - name: http-port
@@ -24,11 +24,11 @@ spec:
 apiVersion: v2
 kind: Service
 metadata:
-  name: will42-app
+  name: wil42-app
 spec:
   type: LoadBalancer
   selector:
-    app: will42-app
+    app: wil42-app
   ports:
     - name: app
       port: 8888
